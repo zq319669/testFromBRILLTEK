@@ -33,7 +33,7 @@ function countFactoriesNumberByEmployee()
 			//check if the employee has been in result array
 			for(k in result)
 			{
-				if(result[k].name == factories[i].employees[j])
+				if(result[k].employee == factories[i].employees[j])
 				{
 					//in result array , count + 1
 					result[k].count+=1;
@@ -43,7 +43,7 @@ function countFactoriesNumberByEmployee()
 			}
 			//not in result array , push a new object
 			if(!added)
-				result.push( {name:factories[i].employees[j] , count:1} )
+				result.push( {employee:factories[i].employees[j] , count:1} )
 			else
 				added = false;
 		}
